@@ -1,79 +1,27 @@
-import{e as a,o as n,G as t}from"./vendor.js";const l={class:"markdown-body"},p=t(`<h1>Pullrefresh\u7EC4\u4EF6</h1><h3>\u4ECB\u7ECD</h3><p>\u7EB5\u5411\u53EF\u652F\u6301\u4E0B\u62C9\u5237\u65B0\u548C\u4E0A\u62C9\u52A0\u8F7D\uFF0C\u6A2A\u5411\u53EF\u652F\u6301\u5DE6\u6ED1\u66F4\u65B0\u3001\u53F3\u6ED1\u52A0\u8F7D\u66F4\u591A</p><h3>\u5B89\u88C5</h3><pre><code class="language-javascript"><span class="hljs-keyword">import</span> { createApp } <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;vue&#39;</span>;
+import{e as a,o as t,G as n}from"./vendor.js";const l={class:"markdown-body"},p=n(`<h1>Price \u5546\u54C1\u4EF7\u683C</h1><h3>\u4ECB\u7ECD</h3><p>\u7528\u6765\u5BF9\u5546\u54C1\u4EF7\u683C\u6570\u503C\u7684\u5C0F\u6570\u70B9\u524D\u540E\u90E8\u5206\u5E94\u7528\u4E0D\u540C\u6837\u5F0F\uFF0C\u8FD8\u652F\u6301\u4EBA\u6C11\u5E01\u7B26\u53F7\u3001\u5343\u4F4D\u5206\u9694\u7B26\u3001\u8BBE\u7F6E\u5C0F\u6570\u70B9\u4F4D\u6570\u7B49\u529F\u80FD\u3002</p><h3>\u5B89\u88C5</h3><pre><code class="language-javascript"><span class="hljs-keyword">import</span> { createApp } <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;vue&#39;</span>;
 <span class="hljs-comment">//vue</span>
-<span class="hljs-keyword">import</span> { PullRefresh } <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;@nutui/nutui&#39;</span>;
+<span class="hljs-keyword">import</span> { Price } <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;@nutui/nutui&#39;</span>;
 <span class="hljs-comment">//taro</span>
-<span class="hljs-keyword">import</span> { PullRefresh } <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;@nutui/nutui-taro&#39;</span>;
+<span class="hljs-keyword">import</span> { Price } <span class="hljs-keyword">from</span> <span class="hljs-string">&#39;@nutui/nutui-taro&#39;</span>;
 
 <span class="hljs-keyword">const</span> app = createApp();
-app.use(PullRefresh);
-</code></pre><h2>\u4EE3\u7801\u6F14\u793A</h2><h3>\u7EB5\u5411</h3><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;vertical&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">nut-pullrefresh</span>
-        @<span class="hljs-attr">refresh</span>=<span class="hljs-string">&quot;refresh&quot;</span>
-        @<span class="hljs-attr">down-refresh</span>=<span class="hljs-string">&quot;downRefresh&quot;</span>
-        <span class="hljs-attr">:useWindow</span>=<span class="hljs-string">&quot;false&quot;</span>
-        <span class="hljs-attr">containerId</span>=<span class="hljs-string">&quot;pull&quot;</span>
-    &gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;content&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;pull&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;main&quot;</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
-                    <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-data&quot;</span>
-                    <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;item in [1, 2, 3, 4, 5, 6, 7, 8, 9]&quot;</span>
-                    <span class="hljs-attr">:key</span>=<span class="hljs-string">&quot;item&quot;</span>
-                    &gt;</span>\u6211\u662F\u6D4B\u8BD5\u6570\u636E {{ item }}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">nut-pullrefresh</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-</code></pre><pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-title">setup</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">const</span> refresh = <span class="hljs-function"><span class="hljs-params">done</span> =&gt;</span> {
-      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#39;\u4E0A\u62C9\u52A0\u8F7D&#39;</span>)
-      <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
-        done();
-      }, <span class="hljs-number">1000</span>);
-    };
+app.use(Price);
 
-    <span class="hljs-keyword">const</span> downRefresh = <span class="hljs-function"><span class="hljs-params">done</span> =&gt;</span> {
-      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#39;\u4E0B\u62C9\u5237\u65B0&#39;</span>)
-      <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
-        done();
-      }, <span class="hljs-number">1000</span>);
-    }
-    <span class="hljs-keyword">return</span> { refresh, downRefresh };
-}
-</code></pre><h3>\u6A2A\u5411</h3><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;horizontal&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">nut-pullrefresh</span>
-        @<span class="hljs-attr">refresh</span>=<span class="hljs-string">&quot;refresh&quot;</span>
-        @<span class="hljs-attr">down-refresh</span>=<span class="hljs-string">&quot;downRefresh&quot;</span>
-        <span class="hljs-attr">:useWindow</span>=<span class="hljs-string">&quot;false&quot;</span>
-        <span class="hljs-attr">containerId</span>=<span class="hljs-string">&quot;pullH&quot;</span>
-        <span class="hljs-attr">direction</span>=<span class="hljs-string">&quot;horizontal&quot;</span>
-    &gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;contentH&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;pullH&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;mainH&quot;</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span>
-            <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;text-data&quot;</span>
-            <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;item in [1, 2, 3, 4, 5, 6, 7, 8, 9]&quot;</span>
-            <span class="hljs-attr">:key</span>=<span class="hljs-string">&quot;item&quot;</span>
-            &gt;</span>\u6211\u662F\u6D4B\u8BD5\u6570\u636E {{ item }}&lt;/div
-            &gt;
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">nut-pullrefresh</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre><h3>\u57FA\u672C\u7528\u6CD5 small normal large</h3><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">nut-price</span> <span class="hljs-attr">:price</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;small&quot;</span> <span class="hljs-attr">:need-symbol</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">:thousands</span>=<span class="hljs-string">&quot;true&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">nut-price</span> <span class="hljs-attr">:price</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;normal&quot;</span> <span class="hljs-attr">:need-symbol</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">:thousands</span>=<span class="hljs-string">&quot;true&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">nut-price</span> <span class="hljs-attr">:price</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;large&quot;</span> <span class="hljs-attr">:need-symbol</span>=<span class="hljs-string">&quot;false&quot;</span> <span class="hljs-attr">:thousands</span>=<span class="hljs-string">&quot;true&quot;</span> /&gt;</span>
+</code></pre><h3>\u4E0D\u4FDD\u7559\u5C0F\u6570</h3><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">nut-price</span> <span class="hljs-attr">:price</span>=<span class="hljs-string">&quot;8888&quot;</span> <span class="hljs-attr">decimal-digits</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;normal&quot;</span> <span class="hljs-attr">:need-symbol</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">:thousands</span>=<span class="hljs-string">&quot;true&quot;</span> /&gt;</span>
+</code></pre><h3>\u8C03\u6574 symbol \u7B26\u53F7\u4F4D\u7F6E</h3><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">nut-price</span> <span class="hljs-attr">:price</span>=<span class="hljs-string">&quot;8888.01&quot;</span> <span class="hljs-attr">position</span>=<span class="hljs-string">&quot;after&quot;</span> <span class="hljs-attr">symbol</span>=<span class="hljs-string">&quot;\u5143&quot;</span> <span class="hljs-attr">size</span>=<span class="hljs-string">&quot;normal&quot;</span> <span class="hljs-attr">:need-symbol</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">:thousands</span>=<span class="hljs-string">&quot;true&quot;</span> /&gt;</span>
+</code></pre><h3>\u6709\u4EBA\u6C11\u5E01\u7B26\u53F7\uFF0C\u65E0\u5343\u4F4D\u5206\u9694</h3><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">nut-price</span> <span class="hljs-attr">:price</span>=<span class="hljs-string">&quot;10010.01&quot;</span> <span class="hljs-attr">:need-symbol</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">:thousands</span>=<span class="hljs-string">&quot;false&quot;</span> /&gt;</span>
+</code></pre><h3>\u5E26\u4EBA\u6C11\u5E01\u7B26\u53F7\uFF0C\u6709\u5343\u4F4D\u5206\u9694\uFF0C\u4FDD\u7559\u5C0F\u6570\u70B9\u540E\u4E09\u4F4D</h3><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">nut-price</span> <span class="hljs-attr">:price</span>=<span class="hljs-string">&quot;15213.1221&quot;</span> <span class="hljs-attr">:decimal-digits</span>=<span class="hljs-string">&quot;3&quot;</span> <span class="hljs-attr">:need-symbol</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">:thousands</span>=<span class="hljs-string">&quot;true&quot;</span> /&gt;</span>
+</code></pre><h3>\u5F02\u6B65\u968F\u673A\u53D8\u66F4</h3><pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">nut-price</span> <span class="hljs-attr">:price</span>=<span class="hljs-string">&quot;price&quot;</span> <span class="hljs-attr">:decimal-digits</span>=<span class="hljs-string">&quot;3&quot;</span> <span class="hljs-attr">:need-symbol</span>=<span class="hljs-string">&quot;true&quot;</span> <span class="hljs-attr">:thousands</span>=<span class="hljs-string">&quot;true&quot;</span> /&gt;</span>
 </code></pre><pre><code class="language-javascript"><span class="hljs-function"><span class="hljs-title">setup</span>(<span class="hljs-params"></span>)</span> {
-    <span class="hljs-keyword">const</span> refresh = <span class="hljs-function"><span class="hljs-params">done</span> =&gt;</span> {
-      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#39;\u4E0A\u62C9\u52A0\u8F7D&#39;</span>)
-      <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
-        done();
-      }, <span class="hljs-number">1000</span>);
+    <span class="hljs-keyword">const</span> price = ref(<span class="hljs-number">0</span>);
+    <span class="hljs-built_in">setInterval</span>(<span class="hljs-function">() =&gt;</span> {
+        price.value = <span class="hljs-built_in">Math</span>.random()*<span class="hljs-number">10000000</span>;
+    }, <span class="hljs-number">1000</span>);
+    <span class="hljs-keyword">return</span> {
+        price
     };
-
-    <span class="hljs-keyword">const</span> downRefresh = <span class="hljs-function"><span class="hljs-params">done</span> =&gt;</span> {
-      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#39;\u4E0B\u62C9\u5237\u65B0&#39;</span>)
-      <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
-        done();
-      }, <span class="hljs-number">1000</span>);
-    }
-    <span class="hljs-keyword">return</span> { refresh, downRefresh };
 }
-</code></pre><h2>API</h2><h3>Props</h3><table><thead><tr><th>\u53C2\u6570</th><th>\u8BF4\u660E</th><th>\u7C7B\u578B</th><th>\u9ED8\u8BA4\u503C</th></tr></thead><tbody><tr><td>useWindow</td><td>\u5C06\u6EDA\u52A8\u4FA6\u542C\u5668\u6DFB\u52A0\u5230 window \u5426\u5219\u4FA6\u542C\u7EC4\u4EF6\u7684\u7236\u8282\u70B9</td><td>Boolean</td><td>true</td></tr><tr><td>containerId</td><td>\u5728 useWindow \u5C5E\u6027\u4E3A false \u7684\u65F6\u5019\uFF0C\u81EA\u5B9A\u4E49\u8BBE\u7F6E\u8282\u70B9ID</td><td>String</td><td>\u2018\u2019</td></tr><tr><td>disabled</td><td>\u7EC4\u4EF6\u662F\u5426\u6FC0\u6D3B</td><td>Boolean</td><td>true</td></tr><tr><td>direction</td><td>\u6EDA\u52A8\u7684\u65B9\u5411\uFF0C\u2018vertical\u2019 \u7EB5\u5411\u3001\u2018horizontal\u2019 \u6A2A\u5411</td><td>String</td><td>\u2018vertical\u2019</td></tr><tr><td>pullingText</td><td>&#39;\u4E0B\u62C9\u2019\u6587\u6848</td><td>Object</td><td>{top: \u2018\u4E0B\u62C9\u5237\u65B0\u2019, bottom: \u2018\u4E0A\u62C9\u52A0\u8F7D\u2019,left: \u2018\u5DE6\u6ED1\u5237\u65B0\u2019, right: \u2018\u53F3\u6ED1\u52A0\u8F7D\u2019}</td></tr><tr><td>loosingText</td><td>&#39;\u91CA\u653E\u2019\u6587\u6848</td><td>Object</td><td>{top: \u2019\u677E\u624B\u91CA\u653E\u5237\u65B0\u2019, bottom: \u2018\u677E\u624B\u91CA\u653E\u5237\u65B0\u2019,left: \u2018\u91CA\u653E\u5237\u65B0\u2019, right: \u2018\u52A0\u8F7D\u66F4\u591A\u2019}</td></tr><tr><td>loadingText</td><td>&#39;\u52A0\u8F7D\u4E2D\u2019\u6587\u6848</td><td>Object</td><td>{top: \u2018\u52A0\u8F7D\u4E2D\u2026\u2019, bottom: \u2018\u52A0\u8F7D\u4E2D\u2026\u2019,left: \u2018\u52A0\u8F7D\u4E2D\u2026\u2019, right: \u2018\u52A0\u8F7D\u4E2D\u2026\u2019}</td></tr></tbody></table><h3>Events</h3><table><thead><tr><th>\u4E8B\u4EF6\u540D</th><th>\u8BF4\u660E</th><th>\u56DE\u8C03\u53C2\u6570</th></tr></thead><tbody><tr><td>refresh</td><td>\u7EB5\u5411-\u4E0A\u62C9\u52A0\u8F7D\u3001\u6A2A\u5411-\u53F3\u6ED1\u52A0\u8F7D\u66F4\u591A\u65F6\u89E6\u53D1</td><td>done() \u51FD\u6570\uFF0C\u5728\u6570\u636E\u66F4\u65B0\u5B8C\u6210\u4EE5\u540E\uFF0C\u9700\u8981\u8C03\u7528 done() \u51FD\u6570\u5C06\u7EC4\u4EF6\u72B6\u6001\u521D\u59CB\u5316</td></tr><tr><td>downRefresh</td><td>\u7EB5\u5411-\u4E0B\u62C9\u5237\u65B0\u3001\u6A2A\u5411-\u5DE6\u6ED1\u5237\u65B0\u65F6\u89E6\u53D1</td><td>done() \u51FD\u6570\uFF0C\u5728\u6570\u636E\u66F4\u65B0\u5B8C\u6210\u4EE5\u540E\uFF0C\u9700\u8981\u8C03\u7528 done() \u51FD\u6570\u5C06\u7EC4\u4EF6\u72B6\u6001\u521D\u59CB\u5316</td></tr></tbody></table>`,17),e=[p],j={setup(c,{expose:s}){return s({frontmatter:{}}),(r,o)=>(n(),a("div",l,e))}};export{j as default};
+</code></pre><h3>Prop</h3><table><thead><tr><th>\u5B57\u6BB5</th><th>\u8BF4\u660E</th><th>\u7C7B\u578B</th><th>\u9ED8\u8BA4\u503C</th></tr></thead><tbody><tr><td>price</td><td>\u4EF7\u683C\u6570\u91CF</td><td>Number</td><td>0</td></tr><tr><td>need-symbol</td><td>\u662F\u5426\u9700\u8981\u52A0\u4E0A symbol \u7B26\u53F7</td><td>Boolean</td><td>true</td></tr><tr><td>symbol</td><td>\u7B26\u53F7\u7C7B\u578B</td><td>String</td><td>\xA5</td></tr><tr><td>decimal-digits</td><td>\u5C0F\u6570\u4F4D\u4F4D\u6570</td><td>Number</td><td>2</td></tr><tr><td>thousands</td><td>\u662F\u5426\u6309\u7167\u5343\u5206\u53F7\u5F62\u5F0F\u663E\u793A</td><td>Boolean</td><td>false</td></tr><tr><td>position</td><td>\u7B26\u53F7\u663E\u793A\u5728(\u4EF7\u683C)\u524D\u6216\u8005\u540E(before\u3001after)</td><td>String</td><td>before</td></tr><tr><td>size</td><td>\u4EF7\u683C\u5C3A\u5BF8(large\u3001normal\u3001small)</td><td>String</td><td>large</td></tr></tbody></table>`,20),r=[p],d={setup(e,{expose:s}){return s({frontmatter:{}}),(o,h)=>(t(),a("div",l,r))}};export{d as default};
